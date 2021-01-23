@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>HR</title>
+  </head>
+
+  <body>
+    <canvas id="c1" width="1280" height="720"></canvas>
+    <canvas id="c2" width="1280" height="720"></canvas>
+    <!-- <input type="text" onkeyup="handleKeyup(this)" placeholder="Color" /> -->
+    <div class="app">
+      <div class="app__left">
+        <div class="app__left-top">
+          <video
+            id="video1"
+            src="media/video2.mp4"
+            controls="true"
+            width="400"
+          ></video>
+
+          <input
+            type="text"
+            onkeyup="handleKeyup(this)"
+            placeholder="Color"
+            value="#60e409"
+          />
+          <input
+            type="number"
+            onkeyup="handleKeyupDept(this)"
+            placeholder="Dept"
+            value="100"
+          />
+        </div>
+        <div class="app__left-bottom">
+          <video
+            id="video2"
+            src="media/video1.mp4"
+            controls="true"
+            width="400"
+          ></video>
+          <br />
+
+          <button onclick="moveVideo2('left')">Left</button>
+          <button onclick="moveVideo2('right')">Right</button>
+          <button onclick="moveVideo2('up')">Up</button>
+          <button onclick="moveVideo2('down')">Down</button>
+        </div>
+      </div>
+
+      <div class="app__right">
+        <div class="preview">
+          <canvas id="canvas1" width="800" height="450"></canvas>
+          <canvas id="canvas2" width="800" height="450"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="processor.js"></script>
+  </body>
+</html>
