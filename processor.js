@@ -100,6 +100,7 @@ let processor1 = {
 
   computeFrame: function () {
     this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
+
     let frame = this.ctx1.getImageData(0, 0, this.width, this.height);
     let l = frame.data.length / 4;
 
@@ -129,6 +130,17 @@ let processor2 = {
     setTimeout(function () {
       self.timerCallback();
     }, 0);
+  },
+
+  scaleUp: function () {
+    this.ctx1.scale(1.1, 1.1);
+    this.ctx.clearRect(0, 0, 1280, 720);
+    this.ctx1.clearRect(0, 0, 1280, 720);
+  },
+  scaleDown: function () {
+    this.ctx1.scale(0.9, 0.9);
+    this.ctx.clearRect(0, 0, 1280, 720);
+    this.ctx1.clearRect(0, 0, 1280, 720);
   },
 
   doLoad: function () {
@@ -182,3 +194,11 @@ document.addEventListener("DOMContentLoaded", () => {
   processor1.doLoad();
   processor2.doLoad();
 });
+
+function scaleUp2() {
+  processor2.scaleUp();
+}
+
+function scaleDown2() {
+  processor2.scaleDown();
+}

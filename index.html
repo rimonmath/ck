@@ -8,13 +8,14 @@
   <body>
     <canvas id="c1" width="1280" height="720"></canvas>
     <canvas id="c2" width="1280" height="720"></canvas>
+    <!-- <canvas id="c2" width="640" height="360"></canvas> -->
     <!-- <input type="text" onkeyup="handleKeyup(this)" placeholder="Color" /> -->
     <div class="app">
       <div class="app__left">
         <div class="app__left-top">
           <video
             id="video1"
-            src="media/video2.mp4"
+            src="mediaskip/video2.mp4"
             controls="true"
             width="400"
           ></video>
@@ -35,7 +36,7 @@
         <div class="app__left-bottom">
           <video
             id="video2"
-            src="media/video1.mp4"
+            src="media/ttt.mp4"
             controls="true"
             width="400"
           ></video>
@@ -45,6 +46,8 @@
           <button onclick="moveVideo2('right')">Right</button>
           <button onclick="moveVideo2('up')">Up</button>
           <button onclick="moveVideo2('down')">Down</button>
+          <button onclick="scaleDown2()">-</button>
+          <button onclick="scaleUp2()">+</button>
         </div>
       </div>
 
